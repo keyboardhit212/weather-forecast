@@ -1,0 +1,19 @@
+body {
+    background: #F1F2F3;
+}
+
+.loading-container {
+    display: block;
+    width: auto;
+    height: 300px;
+    margin-top: 350px;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+.loading-container .loading-icon {
+    width: 300px;
+    height: 150px;
+}
+
+

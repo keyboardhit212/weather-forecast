@@ -1,0 +1,16 @@
+.display-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 600px;
+    background: rgb(1,87,155);
+    background: linear-gradient(107deg, rgba(1,87,155,1) 16%, rgba(100,181,246,1) 95%);
+}
+
+.inner-container {
+    width: 1400px;
+    height: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid black;
+}

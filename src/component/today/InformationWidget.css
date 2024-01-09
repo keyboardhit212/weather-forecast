@@ -1,0 +1,19 @@
+img {
+    margin: 0;
+    margin-right: 5px;
+    height: 40px;
+}
+
+.span-container {
+    position: absolute;
+    top: 25px;
+    font-size: 14px;
+}
+
+.span-container span:first-child {
+    color: #B0BEC5;
+}
+
+.span-container span:last-child {
+    font-weight: bold;;
+}

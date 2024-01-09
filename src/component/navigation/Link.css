@@ -1,0 +1,22 @@
+.link {
+    display: inline-block;
+    padding: 8px 12px 8px 12px;
+    font-family: Roboto;
+    font-size: 14px;
+    color: #CFD8DC;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.13);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.1px);
+    -webkit-backdrop-filter: blur(2.1px);
+    border-radius: 2px/2px;
+}
+
+.link:hover {
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 2px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.4px);
+    -webkit-backdrop-filter: blur(2.4px);
+    color: #263238;
+}
