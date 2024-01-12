@@ -12,7 +12,8 @@ export default function Today(props) {
     const date = new DateTime(data?.current?.time);
     const hourly = data?.hourly?.time,
     temperature = data?.hourly?.temperature_2m,
-    weather_code = data?.hourly?.weather_code;
+    weather_code = data?.hourly?.weather_code,
+    current_time = data?.current?.time;
 
 
     return (
@@ -24,7 +25,7 @@ export default function Today(props) {
             <div className="right-container">
                 <WeatherStatus {...props}/>
             </div>
-            <HourlyTimeline {...{hourly, temperature, weather_code}}/>
+            <HourlyTimeline {...{hourly, temperature, weather_code, current_time}}/>
         </div>
     )
 }

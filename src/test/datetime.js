@@ -1,4 +1,3 @@
 import DateTime from "../class/DateTime.js";
 
-const datetime = new DateTime("2024-01-08T05:15");
-console.log(datetime.getTime());
+console.log(DateTime.isTimeWithinHour("2024-01-12T17:00", "2024-01-12T17:22"));

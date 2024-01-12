@@ -84,4 +84,21 @@ export default class DateTime {
                 return "January";
         }
     }
+
+    /*
+    * Checks if both given time is within the hour boundary
+    * @params time1 - Time to be set as the base boundary. Must be an ISO8601 String
+    * @params time2 - Time to be checked if within the hour boundary of the @time1. Must be an ISO8601 String
+    * @return boolean
+    * */
+    static isTimeWithinHour(time1, time2) {
+
+        function getHour(time) {
+            return String(time.split("T")[1].split(":")[0]);
+        }
+
+        if (getHour(time1) === getHour(time2))
+            return true;
+        return false;
+    }
 }

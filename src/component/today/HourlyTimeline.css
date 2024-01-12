@@ -10,7 +10,7 @@
 .content {
     display: flex;
     width: 1100px;
-    height: 155px;
+    height: 135px;
     background: #ECEFF1;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -40,7 +40,6 @@
     display: inline-block;
     width: 157px;
     height: 130px;
-    margin-top: 10px;
     padding: 10px;
     border-right: 1px solid #90A4AE;
 }
