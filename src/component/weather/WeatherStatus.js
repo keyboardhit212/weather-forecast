@@ -32,17 +32,14 @@ function Description({temperature, weather_code, apparent_temperature}) {
     );
 }
 
-function Icon({weather_code}) {
-
+export function Icon({weather_code}) {
     return (
-        <div className="icon-container">
-            <img src={`res/weather_icon/${svg_filename(weather_code)}`}/>
-        </div>
+        <img src={`res/weather_icon/${svg_filename(weather_code)}`}/>
     );
 }
 
 function svg_filename(weather_code) {
-    switch(weather_code) {
+    switch(Number(weather_code)) {
         case 0:
         case 1:
             return "clear-day.svg";

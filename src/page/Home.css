@@ -8,9 +8,14 @@
 }
 
 .inner-container {
+    position: relative;
     width: 1400px;
     height: 100%;
     padding: 20px;
     margin: 0 auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+
+body {
+    background: #ECEFF1;
 }
