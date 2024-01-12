@@ -1,0 +1,42 @@
+.weather-status {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.88);
+    /* border: 1px solid black; */
+}
+
+.temperature-container .temperature {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.temperature-container {
+    position: relative;
+    display: inline-block;
+}
+
+.description-container {
+    display: inline-block;
+    padding: 0 10px;
+    width: 300px;
+    height: 35px;
+    margin-left: 5px;
+    border-left: 1px solid #B0BEC5;
+}
+
+.description-container p {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.description-container p:last-child {
+    font-weight: bold;
+}
+
+.temperature-container 
+img {
+    position: absolute;
+    left: 185px;
+    top: -90px;
+    height: 365px;
+}

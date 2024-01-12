@@ -7,6 +7,8 @@ import OneDayForecast from "../class/api/OneDayForecast";
 import { today } from "../class/api/api";
 import ForwardGeocode from "../class/api/ForwardGeocode";
 
+
+
 export default function Home(props) {
     const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState({});
@@ -24,8 +26,8 @@ export default function Home(props) {
         console.log("Hi, this is the use Effect");
     }, []);
 
-    function getCurrentPage(page) {
-        switch(page) {
+    function CurrentPage({currentPage}) {
+        switch(currentPage) {
             case "Today":
                 return (<Today data={data} {...props}/>);
             default:
@@ -39,7 +41,7 @@ export default function Home(props) {
                 <div className="display-container">
                     <div className="inner-container">
                         <Navigation currentPage={currentPage} setCurrentPage={setCurrentPage}/>
-                        {getCurrentPage(currentPage)}
+                        <CurrentPage currentPage={currentPage}/>
                     </div>
                 </div>
             </>
@@ -48,3 +50,4 @@ export default function Home(props) {
 
     return <Loading/>
 }
+

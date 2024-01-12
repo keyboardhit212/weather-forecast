@@ -3,6 +3,7 @@ import './Today.css';
 import DateTime from "../../class/DateTime";
 import InformationPanel from "./InformationPanel";
 import LocalCity from "../location/LocalCity";
+import WeatherStatus from "../weather/WeatherStatus";
 
 export default function Today(props) {
 
@@ -16,7 +17,7 @@ export default function Today(props) {
                 <InformationPanel {...props}/>
             </div>
             <div className="right-container">
-            <p className="city-name">Bacolod</p>
+                <WeatherStatus {...props}/>
             </div>
         </div>
     )

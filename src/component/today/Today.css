@@ -19,7 +19,8 @@
 }
 
 .right-container {
+    position: relative;
     float: right;
     width: 650px;
-    background: blue;
+    /* border: 1px solid black; */
 }
