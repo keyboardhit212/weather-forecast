@@ -1,5 +1,3 @@
-import OpenMeteoAPI from "./OpenMeteoAPI.js";
-
 export default class OneDayForecast {
 
     constructor(lat, long) {

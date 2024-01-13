@@ -5,10 +5,12 @@ import InformationPanel from "./InformationPanel";
 import LocalCity from "../location/LocalCity";
 import WeatherStatus from "../weather/WeatherStatus";
 import HourlyTimeline from "./HourlyTimeline";
+import Navigation from "../navigation/Navigation";
+import SunriseSunset from "../weather/SunriseSunset";
 
 export default function Today(props) {
 
-    const {data, name} = props;
+    const {data, name, currentPage, setCurrentPage} = props;
     const date = new DateTime(data?.current?.time);
     const hourly = data?.hourly?.time,
     temperature = data?.hourly?.temperature_2m,
@@ -17,15 +19,25 @@ export default function Today(props) {
 
 
     return (
-        <div className="today">
-            <div className="left-container">
-                <LocalCity {...props}/>
-                <InformationPanel {...props}/>
+        <>
+            <div className="display-container">
+                <div className="inner-container">
+                    <Navigation {...{currentPage, setCurrentPage}}/>
+                    <div className="today">
+                        <div className="left-container">
+                            <LocalCity {...props}/>
+                            <InformationPanel {...props}/>
+                        </div>
+                        <div className="right-container">
+                            <WeatherStatus {...props}/>
+                        </div>
+                        <HourlyTimeline {...{hourly, temperature, weather_code, current_time}}/>
+                    </div>
+                </div>
             </div>
-            <div className="right-container">
-                <WeatherStatus {...props}/>
-            </div>
-            <HourlyTimeline {...{hourly, temperature, weather_code, current_time}}/>
-        </div>
+            <SunriseSunset/>
+        </>
+        
+        
     )
 }

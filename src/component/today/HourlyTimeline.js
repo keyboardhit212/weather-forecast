@@ -3,11 +3,11 @@ import {Icon} from "../weather/WeatherStatus";
 import DateTime from '../../class/DateTime';
 
 export default function HourlyTimeline({hourly, temperature, weather_code, current_time}) {
-
+    
     return (
         <div className="hourly-timeline" id="hourly-timeline">
             <div className="content" id="content">
-                {hourly?.map((time, index) => <HourlyWeatherStatus key={index} time={time} temperature={temperature[index]} weather_code={weather_code[index]} is_now={DateTime.isTimeWithinHour(current_time, time)} />)}
+                {hourly?.map((time, index) => <HourlyWeatherStatus key={index} time={time} temperature={temperature[index]} weather_code={weather_code[index]} is_now={DateTime.isTimeWithinHour(current_time, time)} />).slice(0, 24)}
             </div>
         </div>
     )
@@ -21,9 +21,9 @@ export function HourlyWeatherStatus({time, temperature, weather_code, is_now}) {
 
     return (
         <div className="hourly-weather-status" style={is_now ? highlight : {}}>
-            <p className="time">{new DateTime(time).getTime()}</p>
+            <p className="time" style={is_now ? {color: 'white'} : {}}>{new DateTime(time).getTime()}</p>
             <p><Icon {...{weather_code}}/></p>
-            <p className="temperature">{temperature}&deg;</p>
+            <p className="temperature" style={is_now ? {color: 'white'} : {}}>{temperature}&deg;</p>
         </div>
     );
 }

@@ -4,9 +4,8 @@ import "./Home.css";
 import Navigation from "../component/navigation/Navigation";
 import Today from "../component/today/Today";
 import OneDayForecast from "../class/api/OneDayForecast";
-import { today } from "../class/api/api";
-import ForwardGeocode from "../class/api/ForwardGeocode";
-
+import TwoWeekForecast from "../class/api/TwoWeekForecast";
+import SunriseSunset from "../component/weather/SunriseSunset";
 
 
 export default function Home(props) {
@@ -16,34 +15,29 @@ export default function Home(props) {
     const {location} = props;
 
     useEffect(() => {
-        fetch(new OneDayForecast(location[0], location[1]))
+        // fetch(new TwoWeekForecast(location[0], location[1]))
+        fetch(new TwoWeekForecast(10.6, 122.9))
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
             setLoading(!isLoading);
             setData(data);
         })
-        console.log("Hi, this is the use Effect");
     }, []);
 
-    function CurrentPage({currentPage}) {
+    function CurrentPage(props) {
         switch(currentPage) {
             case "Today":
-                return (<Today data={data} {...props}/>);
+                return (<Today {...props}/>);
             default:
-                return (<Today data={data} {...props}/>);
+                return (<Today {...props}/>);
         }
     }
 
     if (!isLoading) {
         return (
-            <>
-                <div className="display-container">
-                    <div className="inner-container">
-                        <Navigation currentPage={currentPage} setCurrentPage={setCurrentPage}/>
-                        <CurrentPage currentPage={currentPage}/>
-                    </div>
-                </div>
+            <>       
+                <CurrentPage {...{currentPage, setCurrentPage, data, ...props}}/>
             </>
         );
     }

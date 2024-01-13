@@ -1,0 +1,10 @@
+.sunrise-sunset-container {
+    width: 500px;
+    height: 150px;
+    border: 1px solid black;
+}
+
+
+.sunrise div {
+    display: inline-block;
+}

@@ -4,13 +4,15 @@ import Home from './page/Home';
 import Lookup from './page/Lookup';
 
 function App() {
-  const [location, setLocation] = useState(null);
-  const [name, setName] = useState('');
+  // const [location, setLocation] = useState(null);
+  // const [name, setName] = useState('');
+  const [location, setLocation] = useState(() => [10.6, 122.9])
+  const [name, setName] = useState(() => 'Bacolod City');
 
   if (location === null)
-    return <Lookup setLocation={setLocation} setName={setName}/>
+    return <Lookup {...{setLocation, setName}}/>
   else
-    return <Home name={name} location={location}/>
+    return <Home {...{name, location}}/>
 
 }
 
