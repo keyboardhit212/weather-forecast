@@ -10,3 +10,4 @@ For this project I used OpenMeteo for the weather api, and for the forward geoco
 
 ## Screenshots
 
+![Screenshot from 2024-01-13 10-02-40](https://github.com/keyboardhit212/weather-forecast/assets/136884319/e0ff6104-6053-4a4d-9e79-d788c318505f)
