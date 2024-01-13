@@ -1,10 +1,43 @@
 .sunrise-sunset-container {
-    width: 500px;
-    height: 150px;
-    border: 1px solid black;
+    width: 422px;
+    height: auto;
+    padding: 10px;
+    /* border: 1px solid black; */
+    margin: 180px auto 0 auto;
 }
 
+.sunrise-sunset-container > p {
+    font-size: 23px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.sunrise {
+    display: inline-block;
+    height: 100px;
+    width: 200px;
+    padding: 10px;
+    /* border: 1px solid black; */
+}
+
+.sunrise img {
+    height: 82px;
+    margin: 0;
+    float: left;
+}
 
 .sunrise div {
     display: inline-block;
+    height: 82px;
+    line-height: 23px;
+    padding-top: 15px;
+}
+
+.sunrise div .sunrise-label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.sunrise div .time-label {
+    font-size: 22px;
 }

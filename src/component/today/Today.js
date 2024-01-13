@@ -35,7 +35,7 @@ export default function Today(props) {
                     </div>
                 </div>
             </div>
-            <SunriseSunset/>
+            <SunriseSunset {...data}/>
         </>
         
         

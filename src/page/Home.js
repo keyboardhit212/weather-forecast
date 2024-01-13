@@ -15,8 +15,7 @@ export default function Home(props) {
     const {location} = props;
 
     useEffect(() => {
-        // fetch(new TwoWeekForecast(location[0], location[1]))
-        fetch(new TwoWeekForecast(10.6, 122.9))
+        fetch(new TwoWeekForecast(location[0], location[1]))
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
